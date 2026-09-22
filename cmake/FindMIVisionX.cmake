@@ -29,7 +29,6 @@ else()
     set(SHARED_LIB_TYPE ".so")
 endif()
 
-if(NOT MIVisionX_FOUND)
 find_path(MIVisionX_INCLUDE_DIRS
     NAMES vx_ext_amd.h
     HINTS
@@ -130,5 +129,4 @@ else()
         message(FATAL_ERROR "{Red}FindMIVisionX -- NOT FOUND${ColourReset}")
     endif()
     message( "-- ${Yellow}NOTE: FindMIVisionX failed to find -- openvx${ColourReset}" )
-endif()
 endif()
